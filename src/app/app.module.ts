@@ -10,13 +10,14 @@ import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import {CookieService} from 'ngx-cookie-service';
+import {DummyComponent} from './dummy/dummy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    // DummyComponent
+    DummyComponent
   ],
   imports: [
     BrowserModule,

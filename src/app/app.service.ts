@@ -41,6 +41,15 @@ export class AppService {
     this.router.navigate(['/home']);
   }
 
+  getResource() {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        {'Content-type': 'application/x-www-form-urlencoded; charset=utf-8',
+          Authorization: 'Bearer ' + this.cookieService.get('access_token')})
+    };
+    return this.http.get('https://localhost:8888/user', httpOptions);
+  }
+
   checkCredentials() {
     if (!this.cookieService.get('access_token')) {
       this.router.navigate(['/']);
